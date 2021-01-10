@@ -144,10 +144,10 @@ def test_abundance_greedy_clustering():
 
 
 
-def test_write_OTU():
+def test_write_otu():
     test_file = os.path.abspath(os.path.join(os.path.dirname(__file__), "test.fna"))
     otu = [("TCAGCGAT", 8), ("TCAGCGAA",8), ("ACAGCGAT", 8), ("ACAGCGAA", 8)]
-    write_OTU(otu, test_file)
+    write_otu(otu, test_file)
     with open(test_file, 'rb') as otu_test:
         assert hashlib.md5(otu_test.read()).hexdigest() == "0a7caf3d43ba5f0c68bc05cb74782dbb"
 
